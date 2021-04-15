@@ -41,6 +41,6 @@ jobs:
       - name: Sleep for 60 seconds
         uses: jakejarvis/wait-action@master
         with:
-          time: '503s'
+          time: '504s'
 
           
