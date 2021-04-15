@@ -1,8 +1,11 @@
 name: Cancel
 on:
   workflow_run:
+    branches:
+    - '!XGovFormBuilder/**'
     workflows:
-    - '!XGovFormBuilder/no-action'
+    - '*'
+
 jobs:
    cancel:
      runs-on: ubuntu-latest
