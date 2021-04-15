@@ -24,11 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Dump GitHub context
-        env:
-          GITHUB_HEADREF: ${{ toJSON(github.head_ref) }}
-          GITHUB_ROWNER: ${{ toJSON(github.repository_owner) }}
-        run: echo "$GITHUB_HEADREF" && echo "$GITHUB_ROWNER"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
