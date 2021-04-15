@@ -1,8 +1,6 @@
 name: Cancel
 on:
   workflow_run:
-    branches:
-    - '!**'
     workflows:
     - '*'
 
