@@ -2,7 +2,7 @@ name: Cancel
 on:
   workflow_run:
     workflows:
-    - '!XGovFormBuilder/digital-form-builder'
+    - '!XGovFormBuilder/no-action'
 jobs:
    cancel:
      runs-on: ubuntu-latest
