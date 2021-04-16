@@ -23,3 +23,14 @@ This is what happens:
 4. if in the github action context, we see that the event named “workflow_run”, has the value head_repository.fork == true
   a. then we run the action that makes an API request to cancel that workflow
   b. if not, we don’t run any cancels, it hasn’t affected our current pipeline in any way
+  
+  
+## Try it!
+
+1. Fork this repo
+2. disable the cancel.yml workflow
+3. Make changes to `https://github.com/XGovFormBuilder/no-action/blob/main/.github/workflows/good.yml` which simulates a CI action
+4. Open a PR against this repo
+5. Watch the actions tab for this repo: https://github.com/XGovFormBuilder/no-action/actions
+
+You should see that, the CI action runs in your repo, but after about ~40s, your workflow will be cancelled on this repo.
