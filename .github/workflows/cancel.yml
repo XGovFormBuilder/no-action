@@ -1,0 +1,21 @@
+name: Cancel
+on:
+  workflow_run: #when the workflow_run event is triggered
+    workflows:
+    - '*' # by any workflow 
+    types:
+      - requested # and only on the 'requested' type 
+jobs:
+   cancel:
+     if: ${{ github.event.workflow_run.head_repository.fork == true }}
+     runs-on: ubuntu-latest
+     steps:
+# Uncomment this step if you want to take a look at the other values in the github context object.
+# You can use another value instead of github.event.workflow_run.head_repository.fork if another is more suited to your repo.
+#       - name: Dump GitHub context 
+#         env:
+#           GITHUB_CONTEXT: ${{ toJSON(github) }}
+#         run: echo "$GITHUB_CONTEXT"
+      - uses: styfle/cancel-workflow-action@0.9.0
+        with:
+         workflow_id: ${{ github.event.workflow.id }}
