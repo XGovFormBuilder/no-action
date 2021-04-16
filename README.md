@@ -29,7 +29,7 @@ This is what happens:
 
 1. Fork this repo
 2. disable the cancel.yml workflow
-3. Make changes to `https://github.com/XGovFormBuilder/no-action/blob/main/.github/workflows/good.yml` which simulates a CI action
+3. Make changes to `https://github.com/XGovFormBuilder/no-action/blob/main/.github/workflows/ci.yml` which simulates a CI action
 4. Open a PR against this repo
 5. Watch the actions tab for this repo: https://github.com/XGovFormBuilder/no-action/actions
 
